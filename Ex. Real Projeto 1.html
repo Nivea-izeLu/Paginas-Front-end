@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Site do exercício 10 mod.2</title> 
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Baskervville+SC&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap'); 
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Baskervville+SC&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Goldman:wght@400;700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+    
+        /* CORES DO PROJETO */
+        :root{
+            --color1:#172026;
+            --color2:#027373;
+            --color3:#04BF9D;
+            --color4:#04BFAD;
+            --color5:#5FCDD9;
+        }
+        @font-face {
+            font-family:'love story';
+            src: url('\Html e Css\arquivos\love story') format('opentype'); /*não ta funcionando :/ */
+        }
+
+
+    body{
+        background-color: var(--color4);
+        margin: 0%;
+    }
+    header{
+        background-image: linear-gradient( to bottom, var(--color2), var(--color1));
+        padding: 30px;
+        border-bottom-right-radius:1rem;
+        border-bottom-left-radius: 1em;
+    }
+    h1{
+        font-family: 'goldman';
+        text-align: center;
+        color: white;
+        font-size: 4dvw; /*tamanho de acordo com o tamanho da tela em largura (Dinamic Viewport Width)*/
+        margin-top: 20px;
+    }
+    h4{
+        font-family: "goldman";
+        text-align: center;
+        color: white;
+        font-stretch:extra-expanded ;
+        font-weight: 600;
+        font-size: 2.8dvw; /*tamanho de acordo com o tamanho da tela em largura (Dinamic Viewport Width)*/
+    }
+    nav{
+        margin-top: 90px;
+        width: 50%;
+    }
+    a{
+        font-size: 15px;
+        font-family: monospace;
+        font-weight: 600;
+        color: white;
+        margin-left: 50px;
+    }
+    main{
+        background-color:rgba(255, 255, 255, 0.795) ;
+        min-width: 300px;
+        max-width: 1000px;
+        margin:auto;
+        text-align: justify;
+        margin-top: 50px;
+        border-radius: 1em;
+        display: grid;
+        box-shadow: 4px 5px 20px var(--color1);
+    }
+    h2{
+        font-family: "barlow condensed";
+        font-size: 35px;
+        color: #172026;
+        background-image: linear-gradient(to left, var(--color2),white 60%);
+        padding-left: 40px;
+        padding-top: 3px;
+        padding-bottom:6px;
+    }
+    img{
+        object-fit: cover;
+        object-position: center;
+        width:80%;
+        height:300px;
+        display: grid; /*ou display grid*/
+        border-radius: 1em;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom:20px;
+    }
+    p{
+        padding-left: 30px;
+        padding-right: 40px;
+        font-family:'Segoe UI', 'Geneva', Verdana, sans-serif;
+        font-weight:500;
+        font-size: 18px;
+        text-indent: 10px;
+        line-height: 28px;
+    }
+    article{
+        margin-top: 20px;
+        margin-bottom:20px;
+        padding: 20px;
+    }
+    iframe{
+        display: grid; /*ou display flex*/
+        border-radius: 1em;
+        margin: auto;
+    }
+    div{
+        margin-left: 30px;
+        margin-right: 30px;
+        background-color: #04bf9d33;
+        border-radius:1em;
+        border-top-right-radius:2em;
+        border-top-left-radius:2em;
+    }
+    h3{
+        background-color: var(--color3);
+        color:var(--color1);
+        margin: 0;
+        padding: 15px;
+        font: bold 23px "barlow condensed" ;
+        text-align: center;
+        border-top-right-radius:1em;
+        border-top-left-radius:1em;
+    }
+    td{
+        font: lighter 18px monospace;
+        padding-right: 30px;
+        width: 30%;
+        text-align: left;
+    }
+    td::before{
+        content: "\2714\00A0";
+    }
+    table{
+        margin-left: 50px;
+    }
+    footer{
+        background-color:#172026de;
+        margin-top: 50px;
+        border-top-right-radius:1em;
+        border-top-left-radius:1em;
+    }
+    .créditos{
+        color:white;
+        background-color: transparent;
+        font-family: "goldman";
+        padding: 20px;
+    }
+    u > a[name=nome]{
+        transition: 1s;
+        color:white;
+        font-family: "goldman";
+        padding: 0;
+        margin: 0;
+        font-size: 23px;
+    }
+    a[name=nome]:hover{
+        transition: 1s;
+        font-size: 20px;
+    }
+    span > a[name=acesse]{
+        transition: 1s;
+        padding: 0;
+        margin: 0;
+        font: 18px 'Segoe UI';
+        font-weight: 500;
+        color:#04BF9D;
+        text-decoration:underline;
+    }
+    span > a[name=acesse]:hover{
+        transition: 1s;
+        font-size: 20px;
+        color:#049177 ;
+    }
+    nav > a{
+        cursor: pointer;
+        position: relative;
+        padding: 10px 5px 10px 5px; /*short hand (1 top 2 left 3 bottom 4 right*/
+        transition: 0.5s;
+    }
+    nav > a:hover{
+        background-color:var(--color2);
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    /*nav > a::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;           /*trasição de linha bem chique*/
+        /*width: 0;/*
+        background: white;
+        transition: 0.3s;
+    }
+    nav > a:hover::after{
+        transition: 0.8s;
+        width: 100%;
+    }*/
+    #video{
+        margin: 0;
+        background-color: transparent;
+    }
+    abbr{
+        text-decoration: none;
+    }
+    strong{
+        background-color: var(--color4);
+        font-weight: bold;
+        padding-top:2px;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curiosidades de Tecnologia</h1>
+        <h4>Tudo sobre o mundo Tech  <br>em um único lugar</h4>
+            <nav>
+                <a heref="">Home</a>
+                <a heref="">Notícias</a>
+                <a heref="">Curiosidades</a>
+                <a heref="" style="margin-right: 0px; margin-left: 50px; margin-top: 30px;">Fale&nbsp;Conosco</a>
+            </nav>
+    </header>
+     <main>
+        <h2>História do Mascote do Android</h2>
+            <section>
+                <P>
+                    Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo Google é um dos mais utilizados para 
+                    dispositivos móveis em todo o mundo. Mas tavez você não saiba que o seu simpático <strong>mascote</strong> tem um nome e uma 
+                    história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.
+                </p>
+            </section>
+    <h2>A Primeira Versão</h2>
+            <section>
+                <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <strong>Dan Morrill</strong>.
+                 Ele conta que abriu o Inkscape (software livre para vetorização de imagens) e criou sua própria versão de robô.
+                  O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa 
+                  para a criação de um mascote.
+                </p>
+            </section>
+        <picture>
+            <img src="arquivos/android.jpg" min-width:="300px">
+        </picture>
+           <section>
+            <P>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os Dandroids.</p>
+           </section>
+    <h2>Surge um Novo Mascote</h2>
+           <section>
+            <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área.
+             A ilustradora Russa Irina Blok, também funcionária do <strong>Google</strong>, ficou com a missão de representar o pequeno robô
+             de uma maneira mais agradável.</p>
+           </section>
+        <img src="arquivos/irina-blok.jpg"  min-width:="300px">
+           <section>
+           <p> A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. 
+            O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.
+           </p>
+        </section>
+        <img src="arquivos/bugdroid.jpg">
+           <section>
+            <p> Principal inspiração para os traços do novo Bugdroid veio daqueles bonequinhos que ilustram portas de banheiro para
+             indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório do Google e
+            olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo. </p>
+                    <article>
+                        <div id="video">
+                            <iframe width="65%" height="300px" src="https://www.youtube.com/embed/5K4pEk19nhs?si=3HSS52Jh7yvgKcCa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </article>
+           </section>
+        <div>
+            <h3>Quer aprender mais?</h3>
+            <p>Outro assunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um <strong>doce</strong>, 
+                em ordem alfabética a partir da versão 1.5 até a 9.0.
+            </p>
+            <table>
+                <tr>
+                    <td>1.5 - <abbr title="Cupcake">Cupcake</abbr></td> 
+                    <td><abbr title="Jujuba">4.1 - Jelly Bean</abbr></td>
+                </tr>
+                <tr>
+                    <td><abbr title="Rosquinha">1.6 - Donut</abbr></td>
+                    <td><abbr title="KitKat">4.4 - KitKat</abbr></td>
+                </tr>
+                <tr>
+                    <td><abbr title="Bomba de Chocolate">3.0 - Eclair</abbr></td>
+                    <td><abbr title="Pirulito">5.0 - Lolipop</abbr></td>
+                </tr>
+                <tr>
+                    <td><abbr title="Iogurte Gelado">2.2 - Froyo</abbr></td> 
+                    <td><abbr title="Marshmallow">6.0 - Marshmallow</abbr></td>
+                </tr>    
+                <tr>
+                    <td><abbr title="Biscoito de Gengibre">2.3 - Gingerbread</abbr></td>
+                    <td><abbr title="Torrone">7.0 - Nougat</abbr></td>
+                </tr>
+                <tr>
+                    <td><abbr title="Caramelo Crocante de Mel">3.0 - Honeycomb</abbr></td>
+                    <td><abbr title="Bolacha Oreo">8.0 - Oreo</abbr></td>
+                </tr>
+                <tr>
+                    <td><abbr title="Sanduíche de Sorvete">4.0 - Ice Cream Sandwich</abbr></td>
+                    <td><abbr title="Torta">9.0 - Pie</abbr></td>
+                </tr>
+            </table>
+            <section>
+                <P>Infelizmente, o Android Q não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar numerações, o que deu origem ao Android 10.
+                 Acesse aqui o site <span><a name="acesse">Android History</span></a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o sistema Android.
+           </p> 
+        </section>
+        </div>
+        <section>
+            <P>Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android e seu simpático mascote.            </p>
+        </section>
+    </main>
+    <footer>
+        <h3 class="créditos">Site criado por <i><u><a name="nome">Nívea Pontes</a></u></i> pelo CursoemVideo.</h3>
+    </footer>
+</body>
+</html>
