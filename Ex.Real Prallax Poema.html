@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordel/Poemas</title>
+<!-- apítulo 20 Aula 07 – Hospedando o Projeto Cordel gratyle>
+    Capítulo 21 Aula 06 – Efeito Zebrado na tabela com HTML e CSS*/ -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Delius&family=Farsan&family=Goldman:wght@400;700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+        .delius{
+        font-family: "Delius", cursive;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .playwrite{
+        font-family: "Playwrite HR Lijeva", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        }
+        .kiwi {
+        font-family: "Kiwi Maru", serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .farsan {
+        font-family: "Farsan", cursive;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+
+
+        @font-face {
+            font-family:'love story';
+            src: url(arquivos/love\ story.ttf) format('opentype'); /*agora funciona :) */
+        }
+        /*cores do projeto*/
+        :root{
+            --cor1:#A62934;
+            --cor2:#D93636;
+            --cor3:#D9725B;
+            --cor4:#F2CEA2;
+            --cor5:#515932;
+            --sombra:#842129;
+            --sombra2:#6d1c23;
+            --font-nova:'love story';
+        }
+        body{
+            margin:0;
+            background-color:var(--cor4);
+        }
+        h1{
+            color:black ;
+            font-size: 40px;
+            text-align: center;
+            margin-top:0;
+            font-family: var(--font-nova);
+            text-shadow: -10px 4px 5px #842129;
+        }
+        h3{
+            color:black ;
+            font-size: 20px;
+            text-align: center;
+            margin-top:0;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: -6px 4px 10px var(--sombra);
+        }
+        h3 a{
+            color: var(--cor4);
+        }
+        header{
+            background-image: linear-gradient(to left, var(--sombra2) , var(--cor1), var(--sombra2));
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        section{
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding-left: 50px;
+        }
+        h4{
+            font-size: 3em;
+            font-family: "Kiwi Maru";
+            font-weight: lighter;
+            color:var(--cor1);
+            text-decoration-line: overline;
+            text-decoration-thickness:3px;
+            margin-right: 10px;
+        }
+        p{
+            font-size: 2em;
+            font-family: "Kiwi Maru", cursive;
+            font-weight: lighter;
+            line-height: 1.7em;
+            margin-right: 10px;
+        }
+        #s1{
+            background-image: url(arquivos/eclipse.webp);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 20px 0px 20px 50px;
+            box-shadow:0px 1px 10px 10px #6d1c234e;
+            color: whitesmoke;
+        }
+        #s2{
+            background-image: url(arquivos/outono\ bem\ triste.webp);
+            background-position:bottom;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 20px 0px 20px 50px;
+            box-shadow:0px 1px 10px 10px #6d1c234e;
+            color: whitesmoke;
+        }
+        aside{
+            max-width: 700px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin: auto;
+        }
+        aside p{
+            text-align: justify;
+            margin:auto;
+            font-family:"farsan" ;
+            font-size: 2em;
+            padding:10px 20px 10px 20px;
+            background-color: #d9725b9f;
+        }
+        aside > h3{
+            text-align: left;
+            padding: 15px 0px 15px 50px ;
+            margin-bottom: 0;
+            text-shadow: none;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
+            font-size: 2em;
+            background-color: var(--cor1);
+            color: whitesmoke;
+        }
+        footer{
+            background-image: linear-gradient(to left, var(--sombra2) , var(--cor1), var(--sombra2));
+            padding-top: 4px;
+            padding-bottom: 4px;
+            text-align:center;
+            margin-top: 70px;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: -6px 4px 10px var(--sombra);
+        }
+        i > a{
+            text-decoration:none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Corações Poéticos</h1>
+        <h3> Por <a href="https://www.jornalopcao.com.br/opcao-cultural/uma-lista-impossivel-15-melhores-poemas-de-amor-29915/" target="_blank">Carlos Drummond de Andrade</a></h3>
+    </header>
+    <main>
+        <section>
+            <h4> As sem razões do amor </h4>
+            <p>
+                Eu te amo porque te amo.<br>
+                Não precisas ser amante,<br>
+                E nem sempre sabes sê-lo<br>
+                Eu te amo porque te amo.<br>
+                Amor é estado de graça<br>
+                E com amor não se paga.<br>
+            </p>
+        </section>
+        <section id="s1">
+            <p>
+                Amor é dado de graça<br>
+                É semeado no vento,<br>
+                Na cachoeira, no eclipse.<br>
+                Amor foge a dicionários<br>
+                E a regulamentos vários.<br>
+            </p>
+        </section>
+        <section>
+            <p>
+                Eu te amo porque não amo<br>
+                Bastante ou demais a mim.<br>
+                Porque amor não se troca,<br>
+                Não se conjuga nem se ama.<br>
+                Porque amor é amor a nada,<br>
+                Feliz e forte em si mesmo.<br>
+            </p>
+        </section>
+        <section id="s2">
+            <p>
+                Amor é primo da morte,<br>
+                E da morte vencedor,<br>
+                Por mais que o matem (e matam)<br>
+                A cada instante de amor.<br>
+            </p>
+        </section>
+        <aside>
+            <h3>Sobre o Autor</h3>
+            <p>
+                Carlos Drummond de Andrade foi poeta, contista e cronista brasileiro do período do modernismo.
+                Considerado um dos maiores escritores do Brasil, Drummond fez parte da segunda geração modernista. Foi precursor da chamada "poesia de 30" com a publicação da obra "Alguma Poesia".
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <h2> Site feito por <u><i> <a href="https://github.com/Nivea-izeLu/Paginas-Front-end" target="_blank">Nivea Pontes</a></i></u></h2>
+    </footer>
+</body>
+</html>
