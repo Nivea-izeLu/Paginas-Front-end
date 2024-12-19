@@ -62,6 +62,26 @@
         tr:nth-child(even){ /*even significa par*/
             background-color: rgba(0, 128, 128, 0.148);
         }
+
+
+    .anterior{
+        position:relative;
+        transform: translate(-50%, -50%);
+        transform: rotate(180deg);
+        float: left;
+    }
+    .anterior  img{
+        height:50px;
+        width:50px;
+        margin:0px 30px -60px 30px;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    .anterior img:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+        box-shadow: -4px -4px 10px rgba(36, 36, 36, 0.644);
+    }
     </style>
 </head>
 <body>
@@ -173,5 +193,10 @@
             </tfoot>
         </table>
     </div>
+    <aside class="anterior">
+        <a href="Ex. Real Projeto 1 Tecnologia.html">
+            <img src="arquivos/proximo.png">
+        </a>
+    </aside>
 </body>
 </html>

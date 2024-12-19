@@ -65,6 +65,7 @@
         margin:auto;
         text-align: justify;
         margin-top: 50px;
+        margin-bottom: 20px;
         border-radius: 1em;
         display: grid;
         box-shadow: 4px 5px 20px var(--color1);
@@ -140,7 +141,7 @@
     }
     footer{
         background-color:#172026de;
-        margin-top: 50px;
+        margin-top: 70px;
         border-top-right-radius:1em;
         border-top-left-radius:1em;
     }
@@ -215,6 +216,44 @@
         padding-bottom: 3px;
         padding-left: 5px;
         padding-right: 5px;
+    }
+    
+
+
+
+    .proximo{
+        position:relative;
+        transform: translate(-50%, -50%);
+        float: right;
+    }
+    .proximo  img{
+        height:50px;
+        width:50px;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    .proximo img:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+        box-shadow: -4px 4px 10px rgba(36, 36, 36, 0.644);
+    }
+    .anterior{
+        position:relative;
+        transform: translate(-50%, -50%);
+        transform: rotate(180deg);
+        float: left;
+    }
+    .anterior  img{
+        height:50px;
+        width:50px;
+        margin:0px 30px -20px 30px;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    .anterior img:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+        box-shadow: -4px -4px 10px rgba(36, 36, 36, 0.644);
     }
     </style>
 </head>
@@ -316,10 +355,20 @@
            </p> 
         </section>
         </div>
-        <section>
+        <section id="s4">
             <P>Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android e seu simpático mascote.            </p>
         </section>
     </main>
+    <aside class="proximo">
+        <a href="Ex. Real Tabela Zebrada Sticky Top.html">
+            <img src="arquivos/proximo.png">
+        </a>
+    </aside>
+    <aside class="anterior">
+        <a href="Ex. Real iframe Redes Sociais.html">
+            <img src="arquivos/proximo.png">
+        </a>
+    </aside>
     <footer>
         <h3 class="créditos">Site criado por <i><u><a href="https://github.com/Nivea-izeLu/Paginas-Front-end" target="_blank" name="nome">Nívea Pontes</a></u></i> pelo CursoemVideo.</h3>
     </footer>
