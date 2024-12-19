@@ -104,6 +104,47 @@
             transition: 0.1s;
             border: 2px solid rgba(255, 255, 255, 0.605);
         }
+
+
+        .proximo{
+            position:absolute;
+            top: 32.6em;
+            left: 95%;
+            transform: translate(-50%, -50%);
+            float: right;
+        }
+        .proximo  img{
+            height:35px;
+            width:35px;
+            margin:0px 30px 10px 30px;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        .proximo img:hover{
+            transform: scale(1.5);
+            transition: 0.5s;
+            box-shadow: -4px 4px 10px  rgba(165, 164, 164, 0.644);
+        }
+        .anterior{
+            position:absolute;
+            top:30em;
+            left: 0;
+            transform: translate(-50%, -50%);
+            transform: rotate(180deg);
+            float: right;
+        }
+        .anterior  img{
+            height:35px;
+            width:35px;
+            margin:0px 30px 10px 30px;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        .anterior img:hover{
+            transform: scale(1.5);
+            transition: 0.5s;
+            box-shadow: -4px -4px 10px  rgba(165, 164, 164, 0.644);
+        }
     </style>
 </head>
 <body>
@@ -146,6 +187,16 @@
                 </abbr>
             </a>
         </footer>
+        <aside class="proximo">
+            <a href="Ex. Real Projeto 1 Tecnologia.html">
+                <img src="arquivos/proximo.png">
+            </a>
+        </aside>
+        <aside class="anterior">
+            <a href="index.html">
+                <img src="arquivos/proximo.png">
+            </a>
+        </aside>
     </main>
 </body>
 </html>
