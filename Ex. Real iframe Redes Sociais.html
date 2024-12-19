@@ -16,10 +16,11 @@
             position: absolute; /*essa é mais uma forma de centralizar divs*/
             top: 45%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);  
         }
         img{
             transform: scale(1.4);
+            border-radius: 1em;
         }
         iframe{
             position: absolute; 
@@ -29,7 +30,6 @@
             width: 188px;
             height: 390px;
             border-radius: 1rem;
-            
         }
         .Button{ 
             position:absolute;
@@ -43,6 +43,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
+            box-shadow: 5px 6px 5px black;
         }
         a{
             margin-right: 20px;
@@ -52,22 +53,56 @@
         #insta{
             background-image: url(arquivos/instagram.jpeg);
             display: inline-block;
+            transition: 0.3s;
+            box-sizing: border-box; /*coloca a borda dentro do elemento ao inves de por fora*/
+        }
+        #insta:hover{
+            transform: scale(0.9);
+            transition: 0.1s;
+            border: 2px solid rgba(255, 255, 255, 0.605);
         }
         #face{
-            background-image: url(arquivos/faceb.png);
+            background-image: url(arquivos/face.png);
             display: inline-block;
+            transition: 0.3s;
+            box-sizing: border-box; /*coloca a borda dentro do elemento ao inves de por fora*/
+        }
+        #face:hover{
+            transform: scale(0.9);
+            transition: 0.1s;
+            border: 2px solid rgba(255, 255, 255, 0.605);
         }
         #home{
             background-image: url(arquivos/home-icone.jpg);
             display: inline-block;
+            transition: 0.3s;
+            box-sizing: border-box; /*coloca a borda dentro do elemento ao inves de por fora*/
+        }
+        #home:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
         }
         #git{
             background-image: url(arquivos/github.png);
             display: inline-block;
+            transition: 0.3s;
+            box-sizing: border-box; /*coloca a borda dentro do elemento ao inves de por fora*/
+        }
+        #git:hover{
+            transform: scale(0.9);
+            transition: 0.1s;
+            border: 2px solid rgba(255, 255, 255, 0.605);
         }
         #youtube{
             background-image: url(arquivos/youtube.png);
             display: inline-block;
+            transition: 0.3s;
+            box-sizing: border-box; /*coloca a borda dentro do elemento ao inves de por fora*/
+        }
+        #youtube:hover{
+            transform: scale(0.9);
+            transition: 0.1s;
+            border: 2px solid rgba(255, 255, 255, 0.605);
         }
     </style>
 </head>
