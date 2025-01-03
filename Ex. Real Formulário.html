@@ -4,13 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalizando cartão</title>
+    <style>
+        :root{
+            --color1:#EAAA10;
+            --color2:#2477A9;
+            --color3:#E7E7E7;
+            --color4:rgb(6, 6, 67);
+            --color5:rgba(6, 6, 67, 0.591);
+            --color6:rgba(6, 6, 67, 0.16);
+        }
+        body{
+            background-color: var(--color1);
+            margin: 0%;
+            padding: 0%;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3dvw;
+            text-align: center;
+            color: var(--color3);
+            background-color: var(--color4);
+            padding: 10px;
+            margin: 0%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        .container{
+            background-color: var(--color3);
+            width: 65dvw;
+            height: auto;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding: 0px;
+            border-radius: 6px;
+            box-shadow: -3px 5px 10px var(--color5);
+        }
+       legend{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5dvw;
+            color: var(--color4);
+            margin: 2.5dvw 0px 2dvw 3dvw;
+       }
+       label{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.8dvw;
+            color: var(--color4);
+            background-color: var(--color6);
+            padding: 0.5dvw 1.0dvw 0.5dvw 1dvw;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+       }
+       input{
+            min-width: 100px;
+            font-size: 1.5dvw;
+            margin-left:0px;
+            padding: 0.5dvw 1dvw 0.6dvw 1dvw;
+            border:solid 0.15dvw transparent;
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+       }
+       form div{
+            display: flex;
+            width: 60dvw;
+            height: auto;
+            margin: 2dvw 0px 0dvw 2dvw;
+            align-items: center;
+       }
+        #rad{
+            display: block;
+            margin: 2dvw 0px 0dvw 2dvw;
+
+                & #label{
+                    padding-left:9.8dvw;
+                    padding-right: 9.7dvw;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border-bottom-left-radius: 0%;
+                }
+        }
+        .radio{
+            width: 27dvw;
+            display: block;
+            background-color:white;
+            margin: 5px 0px 1.5dvw 0px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+                & input{
+                    height: 1.5dvw;
+                    margin: 8px -25px 8px -20px;
+                }
+                & label{
+                    font-size: 1.5dvw;
+                    background-color: transparent;
+                    padding-top: -3px;
+                }
+       }
+       #rg, #renda{
+        background-color: white;
+        padding: 0.35dvw 1dvw 0.35dvw 1dvw;
+       }
+    </style>
 </head>
 <body>
-    <div>
-        <h2>Personalização do Cartão</h2>
-            <form>
-                
-            </form>
+    <div class="container">
+        <h1>Personalização do Cartão</h1>
+            <form method="post" autocomplete="on">
+                <legend>
+                    <strong>Dados do Cartão</strong>
+                </legend>
+            <div>
+                <label id="label" for="nome" autocomplete="name">Nome Completo</label>
+                <input type="text" size="45" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div>
+                <label id="label" for="cpf">CPF</label>
+                <input type="number" id="cpf" placeholder="123456789-12" min="100000000" max="9999999999999" pattern="^\d{9}-\d{2}$">
+            </div>
+            <div>
+                <label id="label" for="nasc">Data de Nascimento</label>
+                <input type="date" id="nasc" placeholder="01-01-1991" required>
+            </div>
+            <div>
+                <label id="label" for="bank">Agência Bancária</label>
+                <input type="number" id="bank" placeholder="0000-0" min="3" max="5" pattern="^\d{3,4}-\d{1,2}$" required>
+            </div>
+            <div id="rad">
+                <label id="label" for="bandeira">Bandeira</label>
+                <div class="radio">
+                    <input type="radio" name="bandeira" id="visa" required>
+                    <label for="visa">Visa</label><br>
+                    <input type="radio" name="bandeira" id="master" checked required>
+                    <label for="master">MasterCard</label><br>
+                    <input type="radio" name="bandeira" id="elo" required>
+                    <label for="elo">Elo</label><br>
+                    <input type="radio" name="bandeira" id="hiper" required>
+                    <label for="hiper">HiperCard</label><br>
+                    <input type="radio" name="bandeira" id="amex" required>
+                    <label for="amex">American&nbsp;Express</label><br>
+                </div>
+            </div>
+            <div>
+                <label id="label" for="mod">Modalidade de Crédito</label>
+                <input type="text" size="25" id="mod" placeholder="Digite sua mod. de crédito" list="modalidade" required>
+                    <datalist id="modalidade">
+                        <option value="Nacional">
+                        <option value="Internacional">
+                        <option value="Gold">
+                        <option value="Platinum">
+                        <option value="Black ou Infinite">
+                    </datalist>
+            </div>
+            <div>
+                <label id="label" for="rg">Cópia do RG</label>
+                <input type="file" id="rg" accept="image/*" required>
+            </div>   
+            <div>
+                <label id="label" for="renda">Comprovação de Renda</label>
+                <input type="file" id="renda" required>
+            </div><br>
+            <legend>
+                <strong>Personalização</strong>
+            </legend>
+            <div id="rad">
+                <label id="label" name="tema" for="theme">Tema</label>
+                <div class="radio" style="width: 24.3dvw;">
+                    <input type="radio" name="tema" id="theme">
+                    <label for="cor">Claro</label><br>
+                    <input type="radio" name="tema" id="theme" checked>
+                    <label for="cor">Escuro</label>
+                </div>
+            </div>
+            <div>
+                <label id="label" for="cor">Cor Principal</label>
+                <input type="color" class="radio" id="cor" required style="height: 3dvw; width: 3dvw;margin: 0%; padding:0.2%;">
+            </div>
+            <div>
+                <label id="label" for="int">Intensidade da Cor</label>
+                <input type="range" class="radio" id="int" required style=" background-color: white; width:20dvw ; margin: 0px 0px 0px 10px; ">
+            </div>
+        </form>
     </div>
 </body>
 </html>
