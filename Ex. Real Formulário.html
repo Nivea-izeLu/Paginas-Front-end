@@ -17,6 +17,7 @@
             background-color: var(--color1);
             margin: 0%;
             padding: 0%;
+            margin-bottom: 150px;
         }
         h1{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -123,6 +124,24 @@
         border-radius: 5px;
         font-size: 1.8dvw;
        }
+       .anterior{
+        position:relative;
+        transform: translate(-50%, -50%);
+        transform: rotate(180deg);
+        float: left;
+        }
+        .anterior  img{
+            height:50px;
+            width:50px;
+            margin:0px 30px -20px 30px;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        .anterior img:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            box-shadow: -4px -4px 10px rgba(36, 36, 36, 0.644);
+        }
     </style>
 </head>
 <body>
@@ -345,8 +364,10 @@
                 
         </form>
     </div>
-    <script>
-
-    </script>
+    <aside class="anterior">
+        <a href="Ex. Real Tabela Zebrada Sticky Top.html">
+            <img src="arquivos/proximo.png">
+        </a>
+    </aside>
 </body>
 </html>

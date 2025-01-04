@@ -65,6 +65,22 @@
 
 
     /*BOTÃO ANTERIOR*/
+    .proximo{
+        position:relative;
+        transform: translate(-50%, -100%);
+        float: right;
+    }
+    .proximo  img{
+        height:50px;
+        width:50px;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    .proximo img:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+        box-shadow: -4px 4px 10px rgba(36, 36, 36, 0.644);
+    }
     .anterior{
         position:relative;
         transform: translate(-50%, -50%);
@@ -194,6 +210,11 @@
             </tfoot>
         </table>
     </div>
+    <aside class="proximo">
+        <a href="Ex. Real Formulário.html">
+            <img src="arquivos/proximo.png">
+        </a>
+    </aside>
     <aside class="anterior">
         <a href="Ex. Real Projeto 1 Tecnologia.html">
             <img src="arquivos/proximo.png">
